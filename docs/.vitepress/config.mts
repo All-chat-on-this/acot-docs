@@ -10,7 +10,7 @@ export default defineConfig({
         nav: nav(),
 
         sidebar: {
-            '/en/': { base: '/en/', items: sidebarUsage() }
+            '/': { base: '/', items: sidebarUsage() }
         },
 
         search: {options: searchOptions()},
@@ -67,13 +67,13 @@ function nav(): DefaultTheme.NavItem[] {
     return [
         {
             text: 'Home',
-            link: '/en/',
-            activeMatch: '/en/'
+            link: '/',
+            activeMatch: '/'
         },
         {
             text: 'Usage',
-            link: '/en/what-is-acot',
-            activeMatch: '/en/'
+            link: '/what-is-acot',
+            activeMatch: '/'
         }
     ]
 }

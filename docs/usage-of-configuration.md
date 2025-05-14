@@ -291,6 +291,26 @@ Specific examples of the default configuration:
 }
 ```
 
+## Security
+
+### API Key Storage
+
+ACOT takes the security of your API keys seriously. Here's how we protect your credentials:
+
+- **Encrypted Storage**: All API keys are encrypted before being stored in the database using industry-standard encryption algorithms.
+- **Secure Transmission**: API keys are transmitted securely over HTTPS/TLS connections to prevent interception.
+- **No Plain Text**: API keys are never stored in plain text in log files or temporary storage.
+- **Local Processing**: When possible, API calls are processed directly from your device to the AI provider, minimizing exposure of your keys.
+- **Key Isolation**: Each configuration's API key is stored separately, reducing the risk in case of a security incident.
+
+When you input an API key into ACOT:
+1. The key is immediately encrypted client-side before transmission
+2. The encrypted key is stored securely in the database
+3. The key is decrypted only when needed to make API calls
+4. The decryption happens in memory and is never written to persistent storage
+
+You can also mask your API key display in the UI using the visibility toggle, preventing casual observation.
+
 ## How It Works
 
 When you send a message in ACOT, the system will:
@@ -386,6 +406,4 @@ When you successfully use a configuration to send a message or successfully test
      - `temperature: 0.3`: More conservative, more deterministic answers, suitable for factual queries
      - `temperature: 0.8`: More creative answers, suitable for creative writing
      - `max_tokens: 256`: Short answers, suitable for brief information
-     - `max_tokens: 4096`: Long answers, suitable for detailed explanations or creative work
-
-By correctly configuring ACOT, you can connect to various large language model APIs, obtaining a more flexible and powerful AI conversation experience.
+     - `
