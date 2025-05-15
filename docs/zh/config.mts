@@ -1,5 +1,5 @@
 import {defineAdditionalConfig} from 'vitepress'
-import { DefaultTheme } from 'vitepress/theme'
+import {DefaultTheme} from 'vitepress/theme'
 
 // https://vitepress.dev/reference/site-config
 export default defineAdditionalConfig({
@@ -10,7 +10,7 @@ export default defineAdditionalConfig({
         nav: nav(),
 
         sidebar: {
-            '/zh/': { base: '/zh/', items: sidebarUsage() }
+            '/zh/': {base: '/zh/', items: sidebarUsage()}
         },
 
         search: {options: searchOptions()},
@@ -58,8 +58,18 @@ function nav(): DefaultTheme.NavItem[] {
             activeMatch: '/zh/'
         },
         {
-            text: '用法',
+            text: '简介',
             link: '/zh/what-is-acot',
+            activeMatch: '/zh/'
+        },
+        {
+            text: '指南',
+            link: '/zh/usage-of-configuration',
+            activeMatch: '/zh/'
+        },
+        {
+            text: '安全',
+            link: '/zh/about-security',
             activeMatch: '/zh/'
         }
     ]
@@ -68,11 +78,18 @@ function nav(): DefaultTheme.NavItem[] {
 function sidebarUsage(): DefaultTheme.SidebarItem[] {
     return [
         {
-            text: '用法',
+            text: '指南',
             collapsed: false,
             items: [
-                { text: '什么是 ACOT？', link: 'what-is-acot' },
-                { text: '编写配置', link: 'usage-of-configuration' }
+                {text: '什么是 ACOT？', link: 'what-is-acot'},
+                {text: '编写配置', link: 'usage-of-configuration'}
+            ]
+        },
+        {
+            text: '安全',
+            collapsed: false,
+            items: [
+                {text: '安全须知', link: 'about-security'}
             ]
         }
     ]

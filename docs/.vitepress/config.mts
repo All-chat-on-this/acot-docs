@@ -10,7 +10,7 @@ export default defineConfig({
         nav: nav(),
 
         sidebar: {
-            '/': { base: '/', items: sidebarUsage() }
+            '/': {base: '/', items: sidebarUsage()}
         },
 
         search: {options: searchOptions()},
@@ -71,8 +71,18 @@ function nav(): DefaultTheme.NavItem[] {
             activeMatch: '/'
         },
         {
-            text: 'Usage',
+            text: 'Instructions',
             link: '/what-is-acot',
+            activeMatch: '/'
+        },
+        {
+            text: 'Usage',
+            link: '/usage-of-configuration',
+            activeMatch: '/'
+        },
+        {
+            text: 'Security',
+            link: '/about-security',
             activeMatch: '/'
         }
     ]
@@ -84,8 +94,15 @@ function sidebarUsage(): DefaultTheme.SidebarItem[] {
             text: 'Usage',
             collapsed: false,
             items: [
-                { text: 'What is ACOT?', link: 'what-is-acot' },
-                { text: 'Writing Configuration', link: 'usage-of-configuration' }
+                {text: 'What is ACOT?', link: 'what-is-acot'},
+                {text: 'Writing Configuration', link: 'usage-of-configuration'}
+            ]
+        },
+        {
+            text: 'Security',
+            collapsed: false,
+            items: [
+                {text: 'About Security', link: 'about-security'}
             ]
         }
     ]
