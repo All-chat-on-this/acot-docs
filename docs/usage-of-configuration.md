@@ -406,4 +406,6 @@ When you successfully use a configuration to send a message or successfully test
      - `temperature: 0.3`: More conservative, more deterministic answers, suitable for factual queries
      - `temperature: 0.8`: More creative answers, suitable for creative writing
      - `max_tokens: 256`: Short answers, suitable for brief information
-     - `
+     - `max_tokens: 4096`: Long answer, suitable for detailed explanation or creation
+
+By configuring ACOT correctly, you can connect to various large language model APIs for a more flexible and powerful AI conversation experience.

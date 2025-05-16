@@ -13,7 +13,7 @@ export default defineConfig({
             '/': {base: '/', items: sidebarUsage()}
         },
 
-        search: {options: searchOptions()},
+        search: {provider: 'local', options: searchOptions()},
 
         socialLinks: [
             {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
@@ -57,9 +57,6 @@ export default defineConfig({
             label: '简体中文',
             lang: 'zh-CN',
         },
-    },
-    search: {
-        provider: "local",
     },
 })
 
