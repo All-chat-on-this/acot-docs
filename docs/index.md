@@ -13,7 +13,7 @@ hero:
       text: Usage of Configuration
       link: /usage-of-configuration
   image:
-    src: /undraw_ai-agent_pdkp.svg
+    src: /ai-agent.svg
     alt: AI Agent Illustration
 
 features:

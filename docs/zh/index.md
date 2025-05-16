@@ -13,7 +13,7 @@ hero:
       text: 配置使用指南
       link: /zh/usage-of-configuration
   image:
-      src: /undraw_ai-agent_pdkp.svg
+      src: /ai-agent.svg
       alt: AI 代理
 
 features:

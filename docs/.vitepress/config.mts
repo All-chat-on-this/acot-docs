@@ -5,8 +5,18 @@ import {DefaultTheme} from "vitepress/theme";
 export default defineConfig({
     title: "ACOT Documentation",
     description: "ACOT Website Instructions",
+
+    head: [
+        ['link', {rel: 'icon', type: 'image/svg+xml', href: '/ai-agent.svg'}],
+        ['link', {rel: 'icon', type: 'image/png', href: '/vitepress-logo-mini.png'}],
+        ['meta', {property: 'og:type', content: 'website'}],
+        ['meta', {property: 'og:site_name', content: 'ACOT Docs'}]
+    ],
+
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
+        logo: {src: '/book.svg', width: 24, height: 24},
+
         nav: nav(),
 
         sidebar: {
@@ -16,7 +26,7 @@ export default defineConfig({
         search: {provider: 'local', options: searchOptions()},
 
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
+            {icon: 'github', link: 'https://github.com/All-chat-on-this'}
         ],
 
         docFooter: {
