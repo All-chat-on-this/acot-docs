@@ -27,6 +27,6 @@ features:
     title: 统一会话管理
     details: 在同一对话中无缝切换不同模型，同时保持完整上下文，实现连贯交互体验。
   - icon: 🔑
-    title: API 密钥管理
-    details: 安全存储和管理您的 API 密钥，支持在头部或请求体中灵活放置。
+    title: API Key 管理
+    details: 安全存储和管理您的 API Key ，支持在头部或请求体中灵活放置。
 ---
